@@ -18,6 +18,7 @@ import 'package:gallery/routes.dart';
 import 'package:gallery/themes/gallery_theme_data.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:widgetbook_annotation/widgetbook_annotation.dart';
 
 import 'firebase_options.dart';
 import 'layout/adaptive.dart';
@@ -47,6 +48,27 @@ void main() async {
   runApp(const GalleryApp());
 }
 
+@WidgetbookApp.material(
+  name: 'Gallery App',
+  frames: [
+    WidgetbookFrame(
+      name: 'Widgetbook',
+      allowsDevices: true,
+    ),
+    WidgetbookFrame(
+      name: 'None',
+      allowsDevices: false,
+    ),
+  ],
+  devices: [Apple.iPhone13ProMax],
+  textScaleFactors: [
+    1.0,
+    2.0,
+    3.0,
+  ],
+  foldersExpanded: true,
+  widgetsExpanded: true,
+)
 class GalleryApp extends StatelessWidget {
   const GalleryApp({
     super.key,
@@ -104,6 +126,7 @@ class GalleryApp extends StatelessWidget {
   }
 }
 
+@WidgetbookUseCase(name: 'Default', type: RootPage)
 class RootPage extends StatelessWidget {
   const RootPage({
     super.key,
@@ -118,5 +141,14 @@ class RootPage extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class WidgetBookContainer extends StatelessWidget {
+  const WidgetBookContainer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }

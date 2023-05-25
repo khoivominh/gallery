@@ -4,7 +4,7 @@ repository: https://github.com/flutter/gallery
 version: 2.10.1+021001 # See README.md for details on versioning.
 
 environment:
-  flutter: ^3.10.0-10.0.pre.17 # Keep relatively close to master channel version
+  flutter: ^3.7.12 # Keep relatively close to master channel version
   sdk: ">=2.17.0"
 
 dependencies:
@@ -37,6 +37,9 @@ dependencies:
   transparent_image: ^2.0.1
   url_launcher: ^6.1.2
   vector_math: ^2.1.2
+  widgetbook_annotation: ^2.1.0
+  
+  
 
 dev_dependencies:
   flutter_test:
@@ -50,6 +53,9 @@ dev_dependencies:
   string_scanner: ^1.1.0
   test: ^1.21.1
   web_benchmarks: ^0.1.0
+  widgetbook: ^2.4.1
+  widgetbook_generator: ^2.4.1
+  build_runner: ^2.3.3
 
 flutter:
   generate: true # Enables generation of localized strings from arb files

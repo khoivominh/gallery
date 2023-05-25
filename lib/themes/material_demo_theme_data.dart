@@ -5,7 +5,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'package:widgetbook_annotation/widgetbook_annotation.dart';
+
 class MaterialDemoThemeData {
+  @WidgetbookTheme(
+    name: 'Gallery Theme',
+    isDefault: true,
+  )
   static final themeData = ThemeData(
       colorScheme: _colorScheme.copyWith(
         background: Colors.white,
